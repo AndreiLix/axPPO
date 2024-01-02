@@ -3,7 +3,7 @@
 ## Algorithm
 The methods for adaptive exploration we developed are used in the context of PPO algorithms. A traditional objective of a PPO algorithm is the one introduced by 
 OpenAI, represented by the following loss function:
-```latex
+
 \[   
 L_t(\theta) = \hat{\mathbb{E}}_t\left[L_t^{CLIP}(\theta) - c_1 L_t^{VF}(\theta) + c_2 S[\pi_\theta](s_t)\right]
 \]
