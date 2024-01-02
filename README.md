@@ -17,7 +17,7 @@ $$
 The adaptive exploration framework relies on $G_{recent}$, computed as:
 
 $$
-G_{recent} = G_t(\tau) = \frac{1}{G_{max}}\frac{\sum_{i=t-\tau}^{t} \overline{G}_i^{batch}}{\tau}
+G_{recent} = G_t(τ) = \frac{1}{G_{max}}\frac{\sum_{i=t-τ}^{t} \overline{G}_i^{batch}}{τ}
 $$
 
 Here, $t$ represents the current time step, $\tau$ is a time constant determining how far back to integrate past returns, and $\overline{G}_i^{batch}$ is the mean return across batches at time step $i$. The result is scaled between 0 and 1 by dividing it by $G_{max}$, the maximum return an agent can receive during an episode. In short, $G_{recent}$ represents the recent performance of the agent, parameterized by $\tau$.
