@@ -1,7 +1,11 @@
 # PPO with adaptive exploration
 
 ## Algorithm
-The methods for adaptive exploration we developed are used in the context of PPO algorithms. A traditional objective of a PPO algorithm is the one introduced by OpenAI, represented by the following loss function:
+The methods for adaptive exploration we developed are used in the context of PPO algorithms. A traditional objective of a PPO algorithm is the one introduced by 
+OpenAI, represented by the following loss function:
+
+
+```latex
 
 \[
 L_t(\theta) = \hat{\mathbb{E}}_t\left[L_t^{CLIP}(\theta) - c_1 L_t^{VF}(\theta) + c_2 S[\pi_\theta](s_t)\right]
@@ -20,3 +24,5 @@ G_{recent} = G_t(\tau) = \frac{1}{G_{max}}\frac{\sum_{i=t-\tau}^{t} \overline{G}
 \]
 
 Here, \(t\) represents the current time step, \(\tau\) is a time constant determining how far back to integrate past returns, and \(\overline{G}_i^{batch}\) is the mean return across batches at time step \(i\). The result is scaled between 0 and 1 by dividing it by \(G_{max}\), the maximum return an agent can receive during an episode. In short, \(G_{recent}\) represents the recent performance of the agent, parameterized by \(\tau\).
+
+```
