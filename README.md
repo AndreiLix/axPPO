@@ -28,3 +28,7 @@ Here, $t$ represents the current time step, $\tau$ is a time constant determinin
 
 
 axPPO exhibits a distinct advantage over standard PPO in scenarios where substantial exploratory behavior is essential or beneficial during the initial phases of the learning process.
+
+
+![image](https://github.com/AndreiLix/axPPO/assets/94043928/e98f4344-d023-4ed8-8142-01433abf4f8c)
+
