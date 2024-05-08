@@ -15,7 +15,7 @@ $$
 Our focus is on the entropy bonus represented by $S$ and the entropy coefficient $c_2$, which determines the exploration magnitude. In traditional PPO implementations, $c_2$ remains a fixed hyperparameter throughout training. This paper introduces a new learning algorithm, PPO with adaptive exploration (axPPO), which incorporates a dynamic scaling of the entropy coefficient based on the recent return ($G_{recent}$) obtained by the agent:
 
 $$
-L_t(θ) = \hat{E}_t\left[L_t^{CLIP}(θ) - c_1 L_t^{VF}(θ) + G_{recent} \,c2 \,S[π_θ](s_t)\right]
+L_t(θ) = \hat{E}_t\left[L_t^{CLIP}(θ) - c_1 L_t^{VF}(θ) + G_{recent} c_2 S[π_θ](s_t)\right]
 $$
 
 The adaptive exploration framework relies on $G_{recent}$, computed as:
