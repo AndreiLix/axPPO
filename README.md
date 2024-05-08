@@ -9,7 +9,7 @@ The methods for adaptive exploration we developed are used in the context of PPO
 OpenAI, represented by the following loss function:
 
 $$
-L_t(θ) = \hat{E}_t\[L_t^{CLIP}(θ) - c_1 L_t^{VF}(θ) + c_2 S\[π_θ\](s_t)\]
+L_t(θ) = \hat{E}_t\[L_t^{CLIP}(θ) - c_1 L_t^{VF}(θ) + G_{recent} c_2 S\[π_θ\](s_t)\]
 $$
 
 Our focus is on the entropy bonus represented by $S$ and the entropy coefficient $c_2$, which determines the exploration magnitude. In traditional PPO implementations, $c_2$ remains a fixed hyperparameter throughout training. This paper introduces a new learning algorithm, PPO with adaptive exploration (axPPO), which incorporates a dynamic scaling of the entropy coefficient based on the recent return ($G_{recent}$) obtained by the agent:
