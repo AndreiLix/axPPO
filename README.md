@@ -1,4 +1,5 @@
 # PPO with adaptive exploration
+(see in paper form: https://arxiv.org/abs/2405.04664)
 
 I like this project's origin story - it started from using the method of introspection to address the exploration-exploitation problem. Meaning, I was pondering how I personally address the dual-control problem in my own life. What changes in my environment trigger shifts from reward-seeking to information-seeking behavior and vice versa? One of the most compelling answers was that this trade-off is mediated by recent reward history - if I act strictly by my optimal policy, but I get low reward for a long period of time, I look into new things to try until something sticks and my reward increases. I then put this intuition in computational and then mathematical language and incorporated in the objective function of PPO.
 
