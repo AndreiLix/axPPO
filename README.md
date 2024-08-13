@@ -17,7 +17,7 @@ Our focus is on the entropy bonus represented by $S$ and the entropy coefficient
 
 
 $$
-L_t(θ) = \hat{E}_t\[L_t^{CLIP}(θ) - c_1 L_t^{VF}(θ)+ G_{recent} \cdot c_2 S\[π_θ\](s_t)\]
+L_t(θ) = \hat{E}_t\[L_t^{CLIP}(θ) - c_1 L_t^{VF}(θ)+ G\_{recent} \cdot c_2 S\[π_θ\](s_t)\]
 $$
 
 
