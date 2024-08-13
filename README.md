@@ -3,7 +3,7 @@
 
 I like this project's origin story - it started from using the method of introspection to address the exploration-exploitation problem. Meaning, I was pondering how I personally address the dual-control problem in my own life. What changes in my environment trigger shifts from reward-seeking to information-seeking behavior and vice versa? One of the most compelling answers was that this trade-off is mediated by recent reward history - if I act strictly by my optimal policy, but I get low reward for a long period of time, I look into new things to try until something sticks and my reward increases. I then put this intuition in computational and then mathematical language and incorporated in the objective function of PPO.
 
-The contribution made by my PPO with adaptive exploration (axPPO) is that now we have a PPO with one less hyperparameter to worry about - the exploration constant. The results indicate that axPPO is stable across a wide range of exploration constants, while PPO performance being highly sensitive. The formulation of the objective function and the results table is depicteb below.
+The contribution made by my PPO with adaptive exploration (axPPO) is that now we have a PPO with one less hyperparameter to worry about - the exploration constant. The results indicate that axPPO is stable across a wide range of exploration constants, while PPO performance being highly sensitive. The formulation of the objective function and the results table is depicted below.
 
 ## Algorithm
 The methods for adaptive exploration we developed are used in the context of PPO algorithms. A traditional objective of a PPO algorithm is the one introduced by 
